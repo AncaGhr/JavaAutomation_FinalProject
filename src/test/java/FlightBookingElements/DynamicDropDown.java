@@ -1,14 +1,14 @@
-package FlightBookingTests;
+package FlightBookingElements;
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class DynamicDropDown {
-    @Test
-    public void testMethod() throws InterruptedException{
+    public void dynamicDroDown() throws InterruptedException{
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -43,11 +43,4 @@ public class DynamicDropDown {
 
         driver.findElement(By.xpath("//input[@id='ctl00_mainContent_btn_FindFlights']")).click();
     }
-
-//    private void waitForAlert(){
-//        WebDriver driver = new ChromeDriver();
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2000)); // wait explicit trb sa aiba conditie
-//        wait.until(ExpectedConditions.alertIsPresent()); // conditia pt wait explicit
-//    }
-
 }

@@ -30,9 +30,7 @@ public class Hooks {
         if (result.getStatus() == ITestResult.FAILURE) {
             LoggerUtility.error(result.getThrowable().getMessage());
         }
-        else {
-            LoggerUtility.endTestCase(testName);
-        }
+        LoggerUtility.endTestCase(testName);
     }
 
 }
