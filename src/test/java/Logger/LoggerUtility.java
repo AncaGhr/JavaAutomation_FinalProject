@@ -19,12 +19,12 @@ public class LoggerUtility {
 
     public static synchronized void startTestCase(String testName) {
         ThreadContext.put("threadName", testName);
-        logger.info("=========================== Execution started : " + testName + "===========================");
+        logger.info("=========================== Execution started : " + testName + " =========================== ");
     }
 
 
     public static synchronized void endTestCase(String testName) {
-        logger.info("=========================== Execution finished : " + testName + "===========================");
+        logger.info("=========================== Execution finished : " + testName + " =========================== ");
     }
 
 
@@ -42,7 +42,7 @@ public class LoggerUtility {
 
     public static synchronized void error(String message) {
         logger.error(Thread.currentThread().getName() + " : " + getCallInfo() + " " + message);
-        logger.info("=========================== Test failed: ===========================");
+        logger.info(" =========================== Test failed: =========================== ");
     }
 
 
