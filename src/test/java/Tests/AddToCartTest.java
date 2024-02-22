@@ -25,6 +25,7 @@ public class AddToCartTest extends Hooks {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+        LoggerUtility.info(" The browser is open ");
 
         driver.findElement(By.xpath("//div[12]//div[3]//button[1]")).click();
         LoggerUtility.info(" User adds to cart the pumpkin ");
@@ -49,11 +50,11 @@ public class AddToCartTest extends Hooks {
         driver.findElement(By.cssSelector("input[placeholder='Search for Vegetables and Fruits']")).sendKeys("Man");
         LoggerUtility.info(" User searches for mango in the search bar ");
 
-
         WebElement quantityInput = driver.findElement(By.xpath("//div[@class='products']//div[@class='product']//input[@class='quantity']"));
         quantityInput.sendKeys(Keys.CONTROL + "a");
         quantityInput.sendKeys(Keys.DELETE);
         quantityInput.sendKeys("6");
+        Thread.sleep(500);
         LoggerUtility.info(" User chooses the quantity of mango ");
 
 
@@ -67,6 +68,7 @@ public class AddToCartTest extends Hooks {
         WebElement searchInput = driver.findElement(By.cssSelector("input[placeholder='Search for Vegetables and Fruits']"));
         searchInput.sendKeys(Keys.CONTROL + "a");
         searchInput.sendKeys(Keys.DELETE);
+        Thread.sleep(1000);
         LoggerUtility.info(" User deletes mango from the search bar");
 
 
@@ -148,6 +150,7 @@ public class AddToCartTest extends Hooks {
         Thread.sleep(500);
 
         driver.quit();
+        LoggerUtility.info(" The page closes after the order ");
 
     }
 }
