@@ -31,7 +31,7 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
     @Override
     public Object prepareBrowserOptions(Boolean cicd) {
 
-        HashMap <String, String> testData = getBrowserOptions(); //am scos datele din fisier
+        HashMap <String, String> testData = getBrowserOptions();
         ChromeOptions chromeOptions = new ChromeOptions();
 
         if(cicd){
